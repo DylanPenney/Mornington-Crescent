@@ -123,7 +123,7 @@ class Controller():
         self.dlr_stoppoints = [x.removesuffix(" Station") for x in self.dlr_stoppoints]
         self.dlr_stoppoints = [x.removesuffix(" DLR") for x in self.dlr_stoppoints]
 
-        response = requests.get(f"https://api.tfl.gov.uk/Stoppoint/mode/tflrail")
+        response = requests.get(f"https://api.tfl.gov.uk/Stoppoint/mode/elizabeth-line")
         raw_data = response.json()
         for station in raw_data['stopPoints']:
             self.tfl_rail_stoppoints.append(station['commonName'])
