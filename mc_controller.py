@@ -8,11 +8,11 @@ class Controller():
         self.list_of_piers = []
         self.list_of_stops = []
 
-    def tube(self):
+    def tube(self) -> None:
         self.generate_tube()
         self.play(self.list_of_stations)
 
-    def river(self):
+    def river(self) -> None:
         self.generate_river()
         self.play(self.list_of_piers)
 
@@ -63,7 +63,7 @@ class Controller():
                                 for s in list_of_stations:
                                     time.sleep(0.05)
                                     print(s)
-                                break
+                            break
                         elif (guess in list_of_stations):
                             if (guess not in correct_guesses):
                                 print("Correct")
